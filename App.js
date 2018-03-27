@@ -1,8 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 
 import React, { Component } from 'react';
 import {
@@ -12,28 +7,28 @@ import {
   View
 } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import { Scene, 
+         Router, 
+         TabBar, 
+         Modal, 
+         Schema, 
+         Actions, 
+         Reducer, 
+         ActionConst 
+} from 'react-native-router-flux';
 
-type Props = {};
-export default class App extends Component<Props> {
+import Main from './components/android/js/main';
+import Profile from './components/android/js/profile';
+
+export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+          <Router>
+            <Scene key="root" hideNavBar={true}>
+              <Scene key="main" component={Main} title="Healthy Diet" initial={true} />
+               <Scene key="profile" component={Profile} title="profile"  />
+            </Scene>
+          </Router>
     );
   }
 }
@@ -43,16 +38,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'red',                          
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 30,
     textAlign: 'center',
     margin: 10,
+    fontFamily: 'Roboto',
+    color: 'white',
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#e26097',
     marginBottom: 5,
+    fontSize: 15,
   },
 });
