@@ -20,9 +20,7 @@ export default class header extends Component {
 	render() {
 		return(
 		<View style={styles.headerContainter}>
-		<View style={styles.leftTitle}>
-		<LeftButton image />
-		</View>
+
 
         <View style={styles.headerTitle}>
 
@@ -43,7 +41,7 @@ const styles = StyleSheet.create({
     padding: 10,
     flex: 1,
     flexDirection: 'row',
-    backgroundColor: '#dae6f0',
+    backgroundColor: '#2081c3',
 
    },
    headerTitle: {
@@ -52,8 +50,8 @@ const styles = StyleSheet.create({
 
    },
    namebrand: {
-    color: '#a32424',
-    fontSize: 25
+    color: '#f7f9f9',
+    fontSize: 20
    },
    rightTitle: {
    	flex: 1,

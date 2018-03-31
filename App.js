@@ -25,7 +25,7 @@ export default class App extends Component {
     return (
           <Router>
             <Scene key="root" hideNavBar={true}>
-              <Scene key="main" component={Main} title="Healthy Diet" initial={true} />
+              <Scene key="main" component={Main} initial={true} />
                <Scene key="profile" component={Profile} title="profile"  />
             </Scene>
           </Router>
