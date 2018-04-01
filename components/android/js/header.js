@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     padding: 10,
     flex: 1,
     flexDirection: 'row',
-    backgroundColor: '#2081c3',
+    backgroundColor: 'transparent',
 
    },
    headerTitle: {
@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
    },
    namebrand: {
     color: '#f7f9f9',
-    fontSize: 20
+    fontSize: 20,
+    opacity: 0.7,
    },
    rightTitle: {
    	flex: 1,

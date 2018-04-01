@@ -16,7 +16,7 @@ export default class rightbutton extends Component {
 
 	render() {
 		return(
-        <Image style={styles.rightbutton} source={require('../images/person/038.png')} />
+        <Image style={styles.rightbutton} source={require('../images/person/ios7-gear.png')} />
 
 			)}
 }
@@ -30,8 +30,9 @@ const styles = StyleSheet.create({
 
    },
    rightbutton: {
-   	height: 25,
-   	width: 25
+   	height: 35,
+   	width: 35,
+    opacity: 0.7,
    }
 
 });
